@@ -1,4 +1,4 @@
-import { createGlobalState } from 'react-use';
+import createGlobalState from 'react-use/esm/factory/createGlobalState';
 import { defaultConfig } from '../constants';
 import { Config } from '../types';
 

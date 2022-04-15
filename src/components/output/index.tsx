@@ -7,9 +7,9 @@ import EnvVars from './EnvVars';
 
 const tabClass = (active: boolean) =>
   cn(
-    'px-6 bg-white border border-b-0 border-gray-200 rounded-t-lg whitespace-nowrap select-none cursor-pointer',
+    'px-6 border border-b-0 border-gray-200 rounded-t-lg whitespace-nowrap select-none cursor-pointer',
     {
-      'py-2': active,
+      'py-2 bg-white': active,
       'py-1 bg-gray-100': !active,
     }
   );

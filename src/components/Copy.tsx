@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useCopyToClipboard } from 'react-use';
+import useCopyToClipboard from 'react-use/esm/useCopyToClipboard';
 
 const INITIAL = 'Click to copy';
 

@@ -1,14 +1,22 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { colorBrewer } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { defaultConfig } from '../../constants';
 import { useConfig } from '../../hooks/useConfig';
-import Switch from '../form/Switch';
 import Copy from '../Copy';
 
 const ConfigFile: React.FC = () => {
   const [config] = useConfig();
-  const [singleLine, setSingleLine] = useState(false);
 
   const command = useMemo(() => {
+    if (config.config !== defaultConfig.config) {
+      return `./hsd --config="${config.config}"`;
+    }
+
+    return null;
+  }, [config]);
+
+  const fileContent = useMemo(() => {
     const args: string[] = [];
 
     if (config.daemon) {
@@ -266,18 +274,32 @@ const ConfigFile: React.FC = () => {
       args.push(`rs-no-unbound=true`);
     }
 
-    const joiner = singleLine ? ' ' : ' \\\n\t';
-
-    return args.join(joiner);
-  }, [config, singleLine]);
+    return args.join('\n');
+  }, [config]);
 
   return (
     <div>
-      <Switch label="Single line" value={singleLine} onChange={setSingleLine} />
-      <pre className="p-3 mt-3 overflow-auto bg-gray-100 border rounded">
-        {command}
-      </pre>
-      <Copy value={command} />
+      <div className="mb-2">
+        File:{' '}
+        <span className="p-1 border rounded bg-gray-50">
+          {config.config || defaultConfig.config}
+        </span>
+      </div>
+      <div className="border rounded">
+        <SyntaxHighlighter language="ini" style={colorBrewer}>
+          {fileContent || '# Using default config'}
+        </SyntaxHighlighter>
+      </div>
+      <Copy value={fileContent} />
+
+      {command && (
+        <>
+          <pre className="p-3 mt-3 overflow-auto bg-gray-100 border rounded">
+            {command}
+          </pre>
+          <Copy value={command} />
+        </>
+      )}
     </div>
   );
 };
