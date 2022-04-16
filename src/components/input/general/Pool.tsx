@@ -1,9 +1,9 @@
-import { defaultConfig } from '../../constants';
-import Accordion from '../Accordion';
-import Input from '../form/Input';
-import Text from '../form/Text';
-import { SwitchGroup } from '../form/Switch';
-import { useConfig } from '../../hooks/useConfig';
+import { defaultConfig } from '../../../constants';
+import Accordion from '../../Accordion';
+import Input from '../../form/Input';
+import Text from '../../form/Text';
+import { SwitchGroup } from '../../form/Switch';
+import { useConfig } from '../../../hooks/useConfig';
 
 const Pool: React.FC = () => {
   const [config] = useConfig();

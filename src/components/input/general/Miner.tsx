@@ -1,7 +1,7 @@
-import { defaultConfig } from '../../constants';
-import Accordion from '../Accordion';
-import Input from '../form/Input';
-import Text from '../form/Text';
+import { defaultConfig } from '../../../constants';
+import Accordion from '../../Accordion';
+import Input from '../../form/Input';
+import Text from '../../form/Text';
 
 const Miner: React.FC = () => (
   <Accordion title="Miner Options">

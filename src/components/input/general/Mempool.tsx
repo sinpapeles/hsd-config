@@ -1,7 +1,7 @@
-import { defaultConfig } from '../../constants';
-import Accordion from '../Accordion';
-import Input from '../form/Input';
-import { SwitchGroup } from '../form/Switch';
+import { defaultConfig } from '../../../constants';
+import Accordion from '../../Accordion';
+import Input from '../../form/Input';
+import { SwitchGroup } from '../../form/Switch';
 
 const Mempool: React.FC = () => (
   <Accordion title="Mempool Options">

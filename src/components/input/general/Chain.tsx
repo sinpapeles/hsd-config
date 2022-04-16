@@ -1,6 +1,6 @@
-import Accordion from '../Accordion';
-import Input from '../form/Input';
-import { SwitchGroup } from '../form/Switch';
+import Accordion from '../../Accordion';
+import Input from '../../form/Input';
+import { SwitchGroup } from '../../form/Switch';
 
 const Chain: React.FC = () => (
   <Accordion title="Chain Options">

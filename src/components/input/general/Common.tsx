@@ -1,7 +1,7 @@
-import Accordion from '../Accordion';
-import Input from '../form/Input';
-import Select from '../form/Select';
-import { SwitchGroup } from '../form/Switch';
+import Accordion from '../../Accordion';
+import Input from '../../form/Input';
+import Select from '../../form/Select';
+import { SwitchGroup } from '../../form/Switch';
 
 const Common: React.FC = () => (
   <Accordion title="Common Options">

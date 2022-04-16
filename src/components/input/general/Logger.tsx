@@ -1,7 +1,7 @@
-import { useConfig } from '../../hooks/useConfig';
-import Accordion from '../Accordion';
-import Select from '../form/Select';
-import { SwitchGroup } from '../form/Switch';
+import { useConfig } from '../../../hooks/useConfig';
+import Accordion from '../../Accordion';
+import Select from '../../form/Select';
+import { SwitchGroup } from '../../form/Switch';
 
 const Logger: React.FC = () => {
   const [config] = useConfig();

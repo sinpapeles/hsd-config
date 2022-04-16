@@ -48,7 +48,7 @@ export interface Config {
   sslCert?: string;
   sslKey?: string;
   apiKey?: string;
-  cors?: string;
+  cors?: boolean;
   nsHost?: string;
   nsPort?: number;
   rsHost?: string;

@@ -1,8 +1,8 @@
-import { defaultConfig } from '../../constants';
-import { useConfig } from '../../hooks/useConfig';
-import Accordion from '../Accordion';
-import Input from '../form/Input';
-import { SwitchGroup } from '../form/Switch';
+import { defaultConfig } from '../../../constants';
+import { useConfig } from '../../../hooks/useConfig';
+import Accordion from '../../Accordion';
+import Input from '../../form/Input';
+import { SwitchGroup } from '../../form/Switch';
 
 const Http: React.FC = () => {
   const [config] = useConfig();
