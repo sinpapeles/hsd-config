@@ -1,5 +1,5 @@
 const Footer = () => (
-  <div>
+  <>
     <span>
       Config generator for{'  '}
       <a
@@ -8,7 +8,6 @@ const Footer = () => (
       >
         hsd
       </a>
-      .
     </span>
     <span>
       <a
@@ -17,7 +16,6 @@ const Footer = () => (
       >
         Open source
       </a>
-      .
     </span>
     <span>
       With❤️ &nbsp;by{' '}
@@ -27,9 +25,8 @@ const Footer = () => (
       >
         Sinpapeles
       </a>
-      .
     </span>
-  </div>
+  </>
 );
 
 export default Footer;

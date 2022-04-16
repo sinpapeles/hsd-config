@@ -18,7 +18,7 @@ const App = () => (
           <Output />
         </div>
       </div>
-      <footer className="flex justify-center p-5 pb-2 space-x-2 text-sm">
+      <footer className="flex justify-around p-5 pb-2 space-x-2 text-sm text-center md:space-x-5 md:divide-x divide-dashed md:justify-center">
         <Footer />
       </footer>
     </div>
