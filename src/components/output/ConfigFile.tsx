@@ -173,11 +173,11 @@ const ConfigFile: React.FC = () => {
       args.push(`brontide-port=${config.brontidePort}`);
     }
 
-    if (config.listen && config.publicHost) {
+    if (config.publicHost) {
       args.push(`public-host=${config.publicHost}`);
     }
 
-    if (config.listen && config.publicPort) {
+    if (config.publicPort) {
       args.push(`public-port=${config.publicPort}`);
     }
 

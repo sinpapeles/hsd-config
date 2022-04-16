@@ -24,7 +24,7 @@ const Output: React.FC = () => {
   const [tab, setTab] = useState('cli');
 
   return (
-    <div className="mx-5 w-[30rem]">
+    <>
       <ul className="flex items-end space-x-1">
         {Object.entries(tabs).map(([key, value]) => (
           <li
@@ -41,7 +41,7 @@ const Output: React.FC = () => {
         {tab === 'file' && <ConfigFile />}
         {tab === 'env' && <EnvVars />}
       </div>
-    </div>
+    </>
   );
 };
 

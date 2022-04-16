@@ -13,12 +13,12 @@ import Output from './components/output';
 const App = () => (
   <div className="flex justify-center max-h-screen">
     <div className="flex flex-col max-h-full">
-      <header className="flex items-center my-8 text-3xl">
+      <header className="flex items-center px-5 my-5 text-3xl md:my-8">
         <img src={logo} alt="" className="w-10 h-10" />
         Config Generator
       </header>
-      <div className="flex flex-grow overflow-auto">
-        <div className="flex flex-col space-y-2 w-[30rem] overflow-auto mb-3">
+      <div className="flex flex-col flex-grow px-2 divide-y-2 md:divide-y-0 md:flex-row md:overflow-auto max-w-[60rem]  w-screen ">
+        <div className="flex flex-col pb-3 space-y-2 md:w-1/2 md:overflow-auto ">
           <Common />
           <Node />
           <HTTP />
@@ -29,7 +29,9 @@ const App = () => (
           <Miner />
           <DNS />
         </div>
-        <Output />
+        <div className="py-3 md:w-1/2 md:mx-5 md:py-0">
+          <Output />
+        </div>
       </div>
     </div>
   </div>
