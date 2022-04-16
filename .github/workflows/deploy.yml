@@ -19,11 +19,8 @@ jobs:
       - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: build
-      - name: Deploy to Skynet
-        uses: SkynetLabs/deploy-to-skynet-action@v2
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
-          upload-dir: dist
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          registry-seed: ${{ secrets.REGISTRY_SEED || '' }}
-          registry-datakey: ${{ secrets.REGISTRY_DATAKEY || '' }}
-          skynet-api-key: ${{ secrets.SKYNET_API_KEY || '' }}
+          branch: gh-pages
+          folder: dist
