@@ -11,14 +11,16 @@ const App = () => (
         Config Generator
       </header>
       <div className="flex flex-col flex-grow px-2 divide-y-2 md:divide-y-0 md:flex-row md:overflow-auto max-w-[60rem]  w-screen ">
-        <div className="flex flex-col pb-3 space-y-2 md:w-1/2 md:overflow-auto ">
+        <div className="flex flex-col pb-3 md:w-1/2 md:overflow-auto ">
           <Input />
         </div>
         <div className="py-3 md:w-1/2 md:mx-5 md:py-0">
           <Output />
         </div>
       </div>
-      <Footer />
+      <footer className="flex justify-center p-5 pb-2 space-x-2 text-sm">
+        <Footer />
+      </footer>
     </div>
   </div>
 );

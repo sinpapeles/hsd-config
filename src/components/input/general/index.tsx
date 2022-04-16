@@ -9,7 +9,7 @@ import HTTP from './HTTP';
 import DNS from './DNS';
 
 const General = () => (
-  <>
+  <div className="flex flex-col space-y-2 ">
     <Common />
     <Node />
     <HTTP />
@@ -19,7 +19,7 @@ const General = () => (
     <Pool />
     <Miner />
     <DNS />
-  </>
+  </div>
 );
 
 export default General;
