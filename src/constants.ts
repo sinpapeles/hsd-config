@@ -39,6 +39,7 @@ export const defaultConfig: Config = {
   listen: false,
   seeds: [],
   port: 0,
+  publicHost: '',
   publicPort: 0,
   nodes: [],
   agent: '',
