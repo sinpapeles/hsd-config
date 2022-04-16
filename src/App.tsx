@@ -9,10 +9,11 @@ import Miner from './components/input/Miner';
 import HTTP from './components/input/HTTP';
 import DNS from './components/input/DNS';
 import Output from './components/output';
+import Footer from './components/Footer';
 
 const App = () => (
-  <div className="flex justify-center max-h-screen">
-    <div className="flex flex-col max-h-full">
+  <div className="flex justify-center h-screen">
+    <div className="flex flex-col h-full">
       <header className="flex items-center px-5 my-5 text-3xl md:my-8">
         <img src={logo} alt="" className="w-10 h-10" />
         Config Generator
@@ -33,6 +34,7 @@ const App = () => (
           <Output />
         </div>
       </div>
+      <Footer />
     </div>
   </div>
 );
