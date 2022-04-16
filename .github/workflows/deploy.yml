@@ -18,7 +18,7 @@ jobs:
           cmd: install
       - uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: build
+          cmd: build --base=/${{ github.event.repository.name }}
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
