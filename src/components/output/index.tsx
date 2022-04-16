@@ -1,6 +1,10 @@
 import cn from 'classnames';
 import { useState } from 'react';
-import { Config } from '../../types';
+import {
+  TerminalIcon,
+  DocumentTextIcon,
+  // AdjustmentsIcon,
+} from '@heroicons/react/outline';
 import CLI from './CLI';
 import ConfigFile from './ConfigFile';
 import EnvVars from './EnvVars';
@@ -15,9 +19,24 @@ const tabClass = (active: boolean) =>
   );
 
 const tabs = {
-  cli: 'CLI',
-  file: 'Config File',
-  // env: 'Env Vars',
+  cli: (
+    <>
+      <TerminalIcon className="w-4 h-4" />
+      <span>CLI</span>
+    </>
+  ),
+  file: (
+    <>
+      <DocumentTextIcon className="w-4 h-4" />
+      <span>Config File</span>
+    </>
+  ),
+  // env: (
+  //   <>
+  //     <AdjustmentsIcon className="w-4 h-4" />
+  //     <span>Env Vars</span>
+  //   </>
+  // ),
 };
 
 const Output: React.FC = () => {
@@ -32,7 +51,7 @@ const Output: React.FC = () => {
             className={tabClass(tab === key)}
             onClick={() => setTab(key)}
           >
-            {value}
+            <span className="flex items-center space-x-1">{value}</span>
           </li>
         ))}
       </ul>
