@@ -79,8 +79,8 @@ const CLI: React.FC = () => {
       args.push('--prune');
     }
 
-    if (config.checkpoints) {
-      args.push('--checkpoints');
+    if (!config.checkpoints) {
+      args.push('--checkpoints=false');
     }
 
     if (config.coinCache) {

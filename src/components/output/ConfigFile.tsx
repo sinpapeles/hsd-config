@@ -83,8 +83,8 @@ const ConfigFile: React.FC = () => {
       args.push('prune=true');
     }
 
-    if (config.checkpoints) {
-      args.push('checkpoints=true');
+    if (!config.checkpoints) {
+      args.push('checkpoints=false');
     }
 
     if (config.coinCache) {

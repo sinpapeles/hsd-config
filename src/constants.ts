@@ -25,4 +25,5 @@ export const defaultConfig: Config = {
   httpHost: '127.0.0.1',
   nsHost: '127.0.0.1',
   rsHost: '127.0.0.1',
+  checkpoints: true,
 };
